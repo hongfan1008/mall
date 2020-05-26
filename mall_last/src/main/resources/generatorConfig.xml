@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="mysql" targetRuntime="MyBatis3">
+        <commentGenerator>
+        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+        <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/mall?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false"
+                        userId="root" password="fit2cloud"/>
+
+        <!-- 模型对象 -->
+        <javaModelGenerator targetPackage="com.mall.base.domain" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- XML映射文件 -->
+        <sqlMapGenerator targetPackage="com.mall.base.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- 接口 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.mall.base.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--要生成的数据库表 -->
+
+        <table tableName="user" domainObjectName="User"/>
+        <table tableName="product" domainObjectName="Product"/>
+        <table tableName="category" domainObjectName="Category"/>
+        <table tableName="cart" domainObjectName="Cart"/>
+        <table tableName="pay_info" domainObjectName="PayInfo"/>
+
+
+    </context>
+</generatorConfiguration>
