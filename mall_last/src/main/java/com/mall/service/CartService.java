@@ -49,33 +49,17 @@ public class CartService {
         CartExample cartExample = new CartExample();
         cartExample.createCriteria().andProductNameEqualTo(request.getProductName()).andUserIdEqualTo(userId);
         List<Cart> carts = cartMapper.selectByExample(cartExample);
-        System.out.println(carts);
+        System.out.println(carts+"=====================================");
         if (!(carts.isEmpty())) {
             int length = carts.size();
             for (i = 0; i < length; i++) {
                 Cart cart1 = carts.get(i);
                 if (cart1.getUserId() == userId) {
                     int number = cart1.getProductQuantity() + request.getProductQuantity();
-                    System.out.println("number: " + number);
                     cart1.setProductQuantity(number);
                     cartMapper.updateByExample(cart1, cartExample);
                     return cart1;
                 }
-//
-//                if((cart1.getUserId()!= userId)&(i == length-1)) {
-//                    for(Product product:products){
-//                        productId = product.getId();
-//                        System.out.println("product: "+productId);
-//                    }
-//                    cart.setProductId(productId);
-//                    cart.setUserId(userId);
-//                    cart.setProductImage(request.getProductImage());
-//                    cart.setProductName(request.getProductName());
-//                    cart.setProductPrice(request.getProductPrice());
-//                    cart.setProductQuantity(request.getProductNum());
-//                    cartMapper.insertSelective(cart);
-//                    return cart;
-//                }
 
             }
         } else {

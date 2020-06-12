@@ -5,9 +5,9 @@
 
         </div>
         <div class="detail1">
-            <p>圆领无袖女士T恤</p>
-            <p>价格：¥300</p>
-            <p>  数量：<el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
+            <p>{{product.name}}</p>
+            <p>价格：¥{{product.price}}</p>
+            <p>  数量：<el-input-number v-model="product.num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
             </p>
             <p>
                 <el-button icon="el-icon-shopping-cart-1" type="danger" @click="addToCart()">加入购物车</el-button>
@@ -26,7 +26,7 @@
                 product:{
                     imgUrl:'08_classify.jpg',
                     num:1,
-                    name:'圆领无袖女士T恤',
+                    name:'圆领无袖女士短袖',
                     price:'300'
                 }
             }

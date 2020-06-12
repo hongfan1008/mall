@@ -1,77 +1,20 @@
 <template>
     <div>
         <img src="@/assets/01_index.jpg" class="img">
-<!--        <el-divider content-position="center">热门分类</el-divider>-->
         <div class="classify">
-            <div class="classify_left">
-                <ul class="classify_list">
-                    <li class="classify_list_0">裙装/套装</li>
-                    <li class="classify_list_1">女上装</li>
-                    <li class="classify_list_2">女下装</li>
-                    <li class="classify_list_3">女式外套</li>
-                    <li class="classify_list_4">家居服</li>
+            <el-divider content-position="center">热门分类</el-divider>
+
+            <div>
+                <ul>
+                    <li class="classify_list_0" @click="search()">连衣裙</li>
+                    <li class="classify_list_1" @click="search1()">短袖</li>
+                    <li class="classify_list_1" @click="search2()">裤子</li>
+                    <li class="classify_list_1" @click="search3()">衬衫</li>
+                    <li class="classify_list_1" @click="search4()">外套</li>
+                    <li class="classify_list_1" @click="search5()">半裙</li>
                 </ul>
             </div>
-            <div class="classify_right">
-                <ul class="classify_img">
-                    <li>
-                            <div>
-                                <img src="@/assets/01_img.webp">
-                            </div>
-                            <div class="p">连衣裙</div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="@/assets/02_img.webp">
-                        </div>
-                        <div class="p">
-                            套装
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="@/assets/03_img.webp">
-                        </div>
-                        <div class="p">
-                            半身裙
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="@/assets/04_img.webp">
-                        </div>
-                        <div class="p">
-                            纯色连衣裙
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="@/assets/05_img.webp">
-                        </div>
-                        <div class="p">
-                            雪纺/蕾丝裙
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="@/assets/06_img.webp">
-                        </div>
-                        <div class="p">
-                            A字裙
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="@/assets/07_img.webp">
-                        </div>
-                        <div class="p">
-                            百褶裙
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <el-divider content-position="center">品牌特卖</el-divider>
         </div>
         <div class="content">
             <el-row>
@@ -111,8 +54,107 @@
 </template>
 
 <script>
+    import axios from "axios";
+
     export default {
-        name: "ContentHome"
+        name: "ContentHome",
+        data(){
+            return{
+                text1:'连衣裙',
+                text2:'短袖',
+                text3:'裤子',
+                text4:'衬衫',
+                text5:'外套',
+                text6:'半裙',
+            }
+        },
+        methods:{
+            search(){
+                axios.post('/product/search',{
+                    productName:this.text1
+                })
+                    .then((response)=>{
+                        localStorage.setItem('products', JSON.stringify(response.data));
+                        console.log(JSON.stringify(response.data));
+                        window.location.href='/search';
+
+
+                    }).catch((error)=>{
+                    console.log(error);
+                })
+            },
+            search1(){
+                axios.post('/product/search',{
+                    productName:this.text2
+                })
+                    .then((response)=>{
+                        localStorage.setItem('products', JSON.stringify(response.data));
+                        console.log(JSON.stringify(response.data));
+                        window.location.href='/search';
+
+
+                    }).catch((error)=>{
+                    console.log(error);
+                })
+            },
+            search2(){
+                axios.post('/product/search',{
+                    productName:this.text3
+                })
+                    .then((response)=>{
+                        localStorage.setItem('products', JSON.stringify(response.data));
+                        console.log(JSON.stringify(response.data));
+                        window.location.href='/search';
+
+
+                    }).catch((error)=>{
+                    console.log(error);
+                })
+            },
+            search3(){
+                axios.post('/product/search',{
+                    productName:this.text4
+                })
+                    .then((response)=>{
+                        localStorage.setItem('products', JSON.stringify(response.data));
+                        console.log(JSON.stringify(response.data));
+                        window.location.href='/search';
+
+
+                    }).catch((error)=>{
+                    console.log(error);
+                })
+            },
+            search4(){
+                axios.post('/product/search',{
+                    productName:this.text5
+                })
+                    .then((response)=>{
+                        localStorage.setItem('products', JSON.stringify(response.data));
+                        console.log(JSON.stringify(response.data));
+                        window.location.href='/search';
+
+
+                    }).catch((error)=>{
+                    console.log(error);
+                })
+            },
+            search5(){
+                axios.post('/product/search',{
+                    productName:this.text6
+                })
+                    .then((response)=>{
+                        localStorage.setItem('products', JSON.stringify(response.data));
+                        console.log(JSON.stringify(response.data));
+                        window.location.href='/search';
+
+
+                    }).catch((error)=>{
+                    console.log(error);
+                })
+            },
+
+        }
     }
 
 </script>
@@ -123,32 +165,14 @@
         height: 100%;
     }
     .classify{
-        border: #ff6f8a 1px solid;
-        height: 300px;
-        width: 1200px;
+        /*border: #ff6f8a 1px solid;*/
+        /*height: 300px;*/
+        width: 800px;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
-
-    }
-    .classify_left{
-        /*margin: 0;*/
-        /*padding: 0;*/
-        float: left;
-        width: 180px;
-        height: 300px;
-
-
-    }
-    .classify_right{
-        /*border: 1px solid blue;*/
-    }
-    .classify_list{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
 
     }
     .classify_list_0{
@@ -176,42 +200,6 @@
         cursor: pointer;
         position: relative;
     }
-    .classify_list_2{
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-        width: 180px;
-        line-height: 60px;
-        height: 60px;
-        border-top: 1px solid #fff;
-        background-color: #ff6f8a;
-        cursor: pointer;
-        position: relative;
-    }
-    .classify_list_3{
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-        width: 180px;
-        line-height: 60px;
-        height: 60px;
-        border-top: 1px solid #fff;
-        background-color: #ff6f8a;
-        cursor: pointer;
-        position: relative;
-    }
-    .classify_list_4{
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-        width: 180px;
-        line-height: 60px;
-        height: 60px;
-        border-top: 1px solid #fff;
-        background-color: #ff6f8a;
-        cursor: pointer;
-        position: relative;
-    }
     .content{
         /*border: #ff6f8a 1px solid;*/
         height: auto;
@@ -228,19 +216,21 @@
     a{
         text-decoration: none;
     }
-    .p{
-        font-size: 14px;
-        color: #ff6f8a;
-        margin-left: 20px;
-    }
-    .classify_img{
-        list-style-type: none;
-    }
     .classify_img li{
         display: inline-block;
         margin: 0 40px;
         /*padding-left: 50px;*/
         text-align: left;
+    }
+    ul {
+
+        list-style-type: none;
+        /*padding-left: 600px;*/
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
     }
 
 </style>

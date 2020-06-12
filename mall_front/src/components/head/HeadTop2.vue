@@ -1,10 +1,13 @@
 <template>
     <div class="aa">
+
         <ul>
+            <li><h3>future女装网上商城</h3></li>
+
             <li class="font">
                 {{username}}欢迎您
             </li>
-            <li><a href="#" @click="logout()">注销</a></li>
+            <li><a href="#" @click="logout()">退出登录</a></li>
         </ul>
 
 
@@ -55,7 +58,10 @@
       text-align: center;
   }
 
-
+h3{
+    color: #ff6f8a;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
 
 
 </style>

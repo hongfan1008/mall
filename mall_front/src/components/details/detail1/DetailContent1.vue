@@ -1,20 +1,4 @@
 <template>
-<!--    <div class="a">-->
-<!--        <el-row >-->
-<!--            <el-col :span="12">-->
-<!--                <div class="grid-content bg-purple">-->
-<!--                    <img :src='require("@/assets/"+product.imgUrl)'>-->
-<!--                </div>-->
-<!--            </el-col>-->
-<!--            <el-col :span="12">-->
-<!--                <div class="grid-content bg-purple-light">-->
-<!--                    <p>{{product.name}}</p>-->
-<!--                    <p>价格:¥{{product.price}}</p>-->
-<!--                </div>-->
-
-<!--            </el-col>-->
-<!--        </el-row>-->
-<!--    </div>-->
     <div class="a">
         <div class="detail">
             <img :src='require("@/assets/"+product.imgUrl)'>
@@ -33,8 +17,6 @@
 </template>
 
 <script>
-    import  {Message} from "element-ui";
-
     var userName;
     import axios from 'axios';
     export default {

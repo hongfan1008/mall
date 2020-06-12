@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `user` (
     `id`                   int NOT NULL AUTO_INCREMENT COMMENT '用户id' ,
     `username`             varchar(64) NOT NULL COMMENT '用户名',
-    `password`             varchar(256) DEFAULT NULL COMMENT '用户密码，MD5加密',
+    `password`             varchar(256) DEFAULT NULL COMMENT '用户密码',
     `phone`                varchar(50)  DEFAULT NULL ,
     PRIMARY KEY (`id`)
 )

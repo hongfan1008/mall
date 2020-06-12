@@ -60,7 +60,7 @@
                     <a href="/detail8">
                         <img src="@/assets/08_classify.jpg">
                         <p>¥300</p>
-                        <p>圆领无袖女士T恤</p>
+                        <p>圆领无袖女士短袖</p>
                     </a>
                 </el-col>
             </el-row>

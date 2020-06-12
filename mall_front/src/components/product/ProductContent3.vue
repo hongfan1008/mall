@@ -6,14 +6,14 @@
                     <a href="/detail25">
                         <img src="@/assets/25_classify.jpg">
                         <p>¥118</p>
-                        <p>气质通勤连体裤</p>
+                        <p>气质通勤连体裤子</p>
                     </a>
                 </el-col>
                 <el-col :span="6">
                     <a href="/detail26">
                         <img src="@/assets/26_classify.jpg">
                         <p>¥264</p>
-                        <p>半裙女短款薄牛仔田园风自然褶松紧腰蕾丝拼接春夏半身裙</p>
+                        <p>半裙女短款薄牛仔田园风自然褶松紧腰蕾丝拼接春夏半裙</p>
                     </a>
                 </el-col>
                 <el-col :span="6">
@@ -27,7 +27,7 @@
                     <a href="/detail28">
                         <img src="@/assets/28_classify.jpg">
                         <p>¥300</p>
-                        <p> 时尚优雅气质单裙</p>
+                        <p> 时尚优雅气质半裙</p>
                     </a>
                 </el-col>
             </el-row>
@@ -39,14 +39,14 @@
                     <a href="/detail29">
                         <img src="@/assets/29_classify.jpg">
                         <p>¥210</p>
-                        <p>时尚修身包臀气质单裙</p>
+                        <p>时尚修身包臀气质半裙</p>
                     </a>
                 </el-col>
                 <el-col :span="6">
                     <a href="/detail30">
                         <img src="@/assets/30_classify.jpg">
                         <p>¥264</p>
-                        <p>时尚减龄素色包臀单裙</p>
+                        <p>时尚减龄素色包臀半裙</p>
                     </a>
                 </el-col>
                 <el-col :span="6">
@@ -60,7 +60,7 @@
                     <a href="/detail32">
                         <img src="@/assets/32_classify.jpg">
                         <p>¥300</p>
-                        <p>时尚气质鱼尾散摆单裙</p>
+                        <p>时尚气质鱼尾散摆半裙</p>
                     </a>
                 </el-col>
             </el-row>

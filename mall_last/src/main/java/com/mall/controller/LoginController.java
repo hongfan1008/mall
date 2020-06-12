@@ -3,7 +3,6 @@ package com.mall.controller;
 import com.mall.base.domain.User;
 import com.mall.controller.request.LoginRequest;
 import com.mall.service.UserService;
-import org.apache.shiro.authc.*;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

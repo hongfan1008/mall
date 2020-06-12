@@ -4,21 +4,19 @@
     <el-col>
         <el-row type="flex" justify="center">
             <el-col :span="12">
-                <head-top/>
+                <head-top2/>
             </el-col>
             <el-col :span="12">
                 <head-seacher/>
             </el-col>
         </el-row>
-        <div>
+        <div class="info">
             <p>{{username}}你好：</p>
             <p>您已支付成功，您的订单号为{{orderNumber}}</p>
             <el-button class="cart_btn2" @click="shopping()">继续购物</el-button>
         </div>
         <foot/>
     </el-col>
-
-
 
 </template>
 
@@ -61,5 +59,9 @@
 </script>
 
 <style scoped>
-
+    .info{
+        width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
 </style>

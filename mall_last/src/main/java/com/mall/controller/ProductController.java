@@ -52,7 +52,6 @@ public class ProductController {
     @PostMapping("/findPayInfo")
     public PayInfo findPayInfo(@RequestBody PayInfoRequest request){
         List<PayInfo> payInfo = cartService.findPayInfo(request.getOrderNumber());
-        System.out.println(payInfo.get(0));
         return payInfo.get(0);
     }
 
